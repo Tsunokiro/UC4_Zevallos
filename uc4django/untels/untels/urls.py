@@ -19,5 +19,5 @@ from miapp.views import layout
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", layout, name="layout")
+    path("", layout, name="layout"),
 ]

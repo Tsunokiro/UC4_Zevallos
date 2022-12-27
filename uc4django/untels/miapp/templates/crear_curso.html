@@ -1,0 +1,10 @@
+<h1 class="title">AGREGAR CURSO</h1> 
+<form action="{% url 'crear_curso' %}" method="POST">
+    {% csrf_token %}
+    <label for="nombre">ID: </label>
+    <input name="id">{{id}}</input>
+    <label for="nombre">NOMBRE: </label>
+    <input type="text" name="nombre" />
+
+    <input type="submit" value="Agregar" />
+</form>
