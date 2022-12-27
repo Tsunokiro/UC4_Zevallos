@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title  %}
+ 
+            {% endblock %} 
+            | CFT
+        </title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+    </head>
+    <body>
+        <header>
+            <div id="logotipo">
+                <h1>CRUD UNTELS</h1>
+            </div>
+        </header>
+    
+        <nav>
+            <ul>
+                <li>
+                    <a href="/inicio"> Inicio</a>
+                </li>
+                <li>
+                    <a href="/saludo"> Cursos</a>
+                </li>
+                <li>
+                    <a href="/rango"> Crear Curso</a>
+                </li>
+                <li>
+                    <a href="/rango2"> Carrera</a>
+                </li>
+                <li>
+                    <a href="/rango_numeros"> Crear carrera</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="barra">
+            <span class="esquina-izquierda"></span>
+            <span class="relleno-barra"></span>
+            <span class="esquina-derecha"></span>
+        </div>
+     
+        <div id="content">
+            <div class="box">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+        
+        <footer>
+            UNTELS - Lenguaje de Programación III &copy; Camarena - Corrales - Zevallos {% now "d/m/Y h:m:s" %}
+        </footer>
+    
+    </body>
+</html>
